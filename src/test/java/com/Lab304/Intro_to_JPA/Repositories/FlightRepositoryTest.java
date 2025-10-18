@@ -40,6 +40,7 @@ class FlightRepositoryTest {
 
         Optional<Flight> optionalFlight1 = flightRepository.findByFlightNumber("UX190");
         assertTrue(optionalFlight1.isPresent());
+        assertTrue(optionalFlight1.get().getAircraft().contains("Boeing"));
 
     }
 
