@@ -10,14 +10,15 @@ public class Customer {
     private String customerName;
 
     @Enumerated (EnumType.STRING)
-    private String customerStatus;
+    private CustomerStatus customerStatus;
 
     private int totalCustomerMileage;
 
-    public Customer() {
+    public Customer(String newCustomer, CustomerStatus silver, int i) {
     }
 
-    public Customer(String customerName, String customerStatus, int totalCustomerMileage) {
+    public Customer(Integer customerid, String customerName, CustomerStatus customerStatus, int totalCustomerMileage) {
+        Customerid = customerid;
         this.customerName = customerName;
         this.customerStatus = customerStatus;
         this.totalCustomerMileage = totalCustomerMileage;
@@ -31,11 +32,11 @@ public class Customer {
         this.totalCustomerMileage = totalCustomerMileage;
     }
 
-    public String getCustomerStatus() {
+    public CustomerStatus getCustomerStatus() {
         return customerStatus;
     }
 
-    public void setCustomerStatus(String customerStatus) {
+    public void setCustomerStatus(CustomerStatus customerStatus) {
         this.customerStatus = customerStatus;
     }
 

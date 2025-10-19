@@ -25,7 +25,7 @@ class FlightRepositoryTest {
 
     @Test
     void TestCreateCustomer(){
-        Customer c =new Customer("New Customer","SILVER",200);
+        Customer c =new Customer("New Customer", CustomerStatus.SILVER,200);
         customerRepository.save(c);
 
         Optional<Customer> optionalCustomer = customerRepository.findByCustomerName("New Customer");
